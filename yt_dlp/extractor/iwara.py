@@ -199,6 +199,8 @@ class IwaraIE(IwaraBaseIE):
                     lambda x: f'https://files.iwara.tv/image/thumbnail/{x}/thumbnail-00.jpg'}),
             }),
             'formats': list(self._extract_formats(video_id, video_data.get('fileUrl'))),
+            'user': video_data.get('user'),
+            'tags': video_data.get('tags'),
         }
 
 
